@@ -1,0 +1,5 @@
+{
+  "name": "Finanzas",
+  "description": "Aplicación para llevar las finanzas del hogar, ingresos, gastos, tarjetas y suscripciones.",
+  "requestFramePermissions": []
+}
