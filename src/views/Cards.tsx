@@ -97,6 +97,8 @@ export const Cards: React.FC = () => {
               <select className="p-2 border rounded-lg" value={editCardExpForm.card} onChange={e => setEditCardExpForm({...editCardExpForm, card: e.target.value as Card})}>
                 <option value="Tarjeta Crédito Santander">Santander</option>
                 <option value="Tarjeta de Crédito Iberia Cards ICON">Iberia Cards ICON</option>
+                <option value="Tarjeta Carrefour">Tarjeta Carrefour</option>
+                <option value="Tarjeta El Corte Inglés">Tarjeta El Corte Inglés</option>
               </select>
               <select className="p-2 border rounded-lg" value={editCardExpForm.category} onChange={e => setEditCardExpForm({...editCardExpForm, category: e.target.value as CardCategory})}>
                 <option value="Ordinarios">Ordinarios</option>
@@ -153,6 +155,8 @@ export const Cards: React.FC = () => {
                                 <select className="w-full p-2 border rounded-lg" value={editCardExpForm.card} onChange={e => setEditCardExpForm({...editCardExpForm, card: e.target.value as Card})}>
                                   <option value="Tarjeta Crédito Santander">Santander</option>
                                   <option value="Tarjeta de Crédito Iberia Cards ICON">Iberia Cards ICON</option>
+                                  <option value="Tarjeta Carrefour">Tarjeta Carrefour</option>
+                                  <option value="Tarjeta El Corte Inglés">Tarjeta El Corte Inglés</option>
                                 </select>
                               </td>
                               <td className="p-4">
@@ -222,6 +226,8 @@ export const Cards: React.FC = () => {
               <select className="p-2 border rounded-lg" value={editSubForm.card} onChange={e => setEditSubForm({...editSubForm, card: e.target.value as Card})}>
                 <option value="Tarjeta Crédito Santander">Santander</option>
                 <option value="Tarjeta de Crédito Iberia Cards ICON">Iberia Cards ICON</option>
+                <option value="Tarjeta Carrefour">Tarjeta Carrefour</option>
+                <option value="Tarjeta El Corte Inglés">Tarjeta El Corte Inglés</option>
               </select>
             </div>
             <div className="flex justify-end gap-2 mt-4">
@@ -253,6 +259,8 @@ export const Cards: React.FC = () => {
                           <select className="w-full p-2 border rounded-lg" value={editSubForm.card} onChange={e => setEditSubForm({...editSubForm, card: e.target.value as Card})}>
                             <option value="Tarjeta Crédito Santander">Santander</option>
                             <option value="Tarjeta de Crédito Iberia Cards ICON">Iberia Cards ICON</option>
+                            <option value="Tarjeta Carrefour">Tarjeta Carrefour</option>
+                            <option value="Tarjeta El Corte Inglés">Tarjeta El Corte Inglés</option>
                           </select>
                         </td>
                         <td className="p-4 text-right space-x-2">

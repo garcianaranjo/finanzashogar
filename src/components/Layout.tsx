@@ -1,5 +1,6 @@
 import React from 'react';
 import { LayoutDashboard, Wallet, CreditCard, ArrowDownCircle, ArrowUpCircle } from 'lucide-react';
+import { InstallPWA } from './InstallPWA';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,28 +14,29 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTa
     { id: 'tracking', label: 'Seguimiento Mensual', icon: Wallet },
     { id: 'incomes', label: 'Ingresos', icon: ArrowUpCircle },
     { id: 'expenses', label: 'Gastos', icon: ArrowDownCircle },
-    { id: 'cards', label: 'Tarjetas y Suscripciones', icon: CreditCard },
+    { id: 'cards', label: 'Tarjetas', icon: CreditCard },
   ];
 
   return (
     <div className="min-h-screen bg-neutral-50 flex flex-col md:flex-row font-sans text-neutral-900">
       {/* Sidebar */}
-      <aside className="w-full md:w-64 bg-white border-r border-neutral-200 flex-shrink-0">
+      <aside className="w-full md:w-64 bg-white border-r border-neutral-200 flex-shrink-0 flex flex-col">
         <div className="p-6">
           <h1 className="text-xl font-semibold tracking-tight text-neutral-900 flex items-center gap-2">
             <Wallet className="w-6 h-6 text-emerald-600" />
             Finanzas Casa
           </h1>
         </div>
-        <nav className="px-4 pb-6 space-y-1">
+        <nav className="px-4 pb-6 space-y-1 flex-1">
           {navItems.map((item) => {
             const Icon = item.icon;
             const isActive = activeTab === item.id;
             return (
               <button
                 key={item.id}
+                type="button"
                 onClick={() => setActiveTab(item.id)}
-                className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition-colors ${
+                className={`w-full flex items-center gap-3 px-3 py-2 rounded-xl text-sm font-medium transition-colors text-left ${
                   isActive
                     ? 'bg-emerald-50 text-emerald-700'
                     : 'text-neutral-600 hover:bg-neutral-100 hover:text-neutral-900'
@@ -46,6 +48,9 @@ export const Layout: React.FC<LayoutProps> = ({ children, activeTab, setActiveTa
             );
           })}
         </nav>
+        <div className="p-4 border-t border-neutral-100">
+          <InstallPWA />
+        </div>
       </aside>
 
       {/* Main Content */}

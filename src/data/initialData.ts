@@ -1,5 +1,5 @@
 export type Account = 'Santander de Juan' | 'CaixaBank de Juan' | 'Santander de Sara';
-export type Card = 'Tarjeta Crédito Santander' | 'Tarjeta de Crédito Iberia Cards ICON';
+export type Card = 'Tarjeta Crédito Santander' | 'Tarjeta de Crédito Iberia Cards ICON' | 'Tarjeta Carrefour' | 'Tarjeta El Corte Inglés';
 export type Timing = 'Inicio del mes' | 'Antes de quincena' | 'Después de quincena' | 'Final del mes';
 export type Frequency = 'Mensual' | '14 Pagas' | 'Bimestral' | 'Trimestral' | '10 Meses' | 'Variable';
 export type ExpenseType = 'Transferencia' | 'Débito' | '-';
@@ -65,6 +65,8 @@ export interface MonthlyRecord {
   incomeActuals: Record<string, number>;
   expenseActuals: Record<string, number>;
   cardExpenseActuals: Record<string, number>;
+  cardPaymentActuals?: Record<string, number>;
+  startingBalances?: Record<string, number>;
 }
 
 export const initialIncomes: Income[] = [
